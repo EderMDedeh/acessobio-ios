@@ -9,7 +9,7 @@
 #ifndef FixedValues_h
 #define FixedValues_h
 
-#define NAME_APPLICATION [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleDisplayName"];
+#define NAME_APPLICATION [SWIFTPM_MODULE_BUNDLE objectForInfoDictionaryKey:@"CFBundleDisplayName"];
 
 #define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 #define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)

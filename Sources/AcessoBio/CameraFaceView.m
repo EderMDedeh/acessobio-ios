@@ -63,9 +63,8 @@ float marginOfSides_CameraFace = 80.0f;
 #pragma mark - Close
 
 - (void)addCloseButton {
-    
     btClose = [[UIButton alloc]initWithFrame:CGRectMake(7, 20, 70, 70)];
-    [btClose setImage:[UIImage imageNamed:@"ic_close"] forState:UIControlStateNormal];
+    [btClose setImage:[UIImage imageNamed:@"ic_close" inBundle:SWIFTPM_MODULE_BUNDLE compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
     [btClose addTarget:self action:@selector(close) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btClose];
     
@@ -560,7 +559,8 @@ float marginOfSides_CameraFace = 80.0f;
         ivAcessoBio = [[UIImageView alloc]initWithFrame:CGRectMake((SCREEN_WIDTH/2) - 50, SCREEN_HEIGHT - 50, 100, 40)];
         
     }
-    [ivAcessoBio setImage:[UIImage imageNamed:@"ic_bio"]];
+    
+    [ivAcessoBio setImage:[UIImage imageNamed:@"ic_bio" inBundle:SWIFTPM_MODULE_BUNDLE compatibleWithTraitCollection:nil]];
     [ivAcessoBio setContentMode:UIViewContentModeScaleAspectFit];
     [ivAcessoBio setTag:-99];
     [self.view addSubview:ivAcessoBio];
@@ -1275,7 +1275,7 @@ float marginOfSides_CameraFace = 80.0f;
 
 - (void)addButtonTakePicture : (UIView *)view {
     self.btTakePic = [[UIButton alloc]initWithFrame:CGRectMake((SCREEN_WIDTH/2) - 40, SCREEN_HEIGHT - 100, 80, 80)];
-    [self.btTakePic setImage:[UIImage imageNamed:@"icon_take_pic"] forState:UIControlStateNormal];
+    [self.btTakePic setImage:[UIImage imageNamed:@"icon_take_pic" inBundle:SWIFTPM_MODULE_BUNDLE compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
     [self.btTakePic addTarget:self action:@selector(capture) forControlEvents:UIControlEventTouchUpInside];
     if(_isEnableSmartCapture) {
         [self.btTakePic setAlpha:0.5];

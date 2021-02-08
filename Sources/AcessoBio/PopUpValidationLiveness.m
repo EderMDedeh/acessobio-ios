@@ -36,11 +36,11 @@
     
     iconPopupError = [[UIImageView alloc]initWithFrame:CGRectMake(((self.frame.size.width / 2) - 50), 30, 100, 120)];
     if(popupType == PopupTypeFaceError) {
-        [iconPopupError setImage:[UIImage imageNamed:@"ic_popup_face_error"]];
+        [iconPopupError setImage:[UIImage imageNamed:@"ic_popup_face_error" inBundle:SWIFTPM_MODULE_BUNDLE compatibleWithTraitCollection:nil]];
     }else if(popupType == PopupTypeLightError) {
-        [iconPopupError setImage:[UIImage imageNamed:@"ic_popup_light_error"]];
+        [iconPopupError setImage:[UIImage imageNamed:@"ic_popup_light_error" inBundle:SWIFTPM_MODULE_BUNDLE compatibleWithTraitCollection:nil]];
     }else if(popupType == PopupTypeGeneric){
-        [iconPopupError setImage:[UIImage imageNamed:@"ic_popup_light_error"]];
+        [iconPopupError setImage:[UIImage imageNamed:@"ic_popup_light_error" inBundle:SWIFTPM_MODULE_BUNDLE compatibleWithTraitCollection:nil]];
     }
     [iconPopupError setContentMode:UIViewContentModeScaleAspectFit];
     [self addSubview:iconPopupError];
@@ -75,10 +75,11 @@
         baseValue = (lbDescription.frame.origin.y + lbDescription.frame.size.height - 5);
     }
    
-    [self createAttentionItem:baseValue icon:[UIImage imageNamed:@"ic_reset_lamp"] textItem:@"Esteja em um local bem iluminado"];
-    [self createAttentionItem:baseValue icon:[UIImage imageNamed:@"ic_reset_phone"] textItem:@"Posicione o celular na altura dos olhos"];
-    [self createAttentionItem:baseValue icon:[UIImage imageNamed:@"ic_reset_hat"] textItem:@"Não utilize chapéu ou gorros"];
-    [self createAttentionItem:baseValue icon:[UIImage imageNamed:@"ic_reset_glass"] textItem:@"Retire os óculos escuros ou de grau"];
+    
+    [self createAttentionItem:baseValue icon:[UIImage imageNamed:@"ic_reset_lamp" inBundle:SWIFTPM_MODULE_BUNDLE compatibleWithTraitCollection:nil] textItem:@"Esteja em um local bem iluminado"];
+    [self createAttentionItem:baseValue icon:[UIImage imageNamed:@"ic_reset_phone" inBundle:SWIFTPM_MODULE_BUNDLE compatibleWithTraitCollection:nil] textItem:@"Posicione o celular na altura dos olhos"];
+    [self createAttentionItem:baseValue icon:[UIImage imageNamed:@"ic_reset_hat" inBundle:SWIFTPM_MODULE_BUNDLE compatibleWithTraitCollection:nil] textItem:@"Não utilize chapéu ou gorros"];
+    [self createAttentionItem:baseValue icon:[UIImage imageNamed:@"ic_reset_glass" inBundle:SWIFTPM_MODULE_BUNDLE compatibleWithTraitCollection:nil] textItem:@"Retire os óculos escuros ou de grau"];
 
      btTryAgain = [[UIButton alloc]initWithFrame:CGRectMake(40, (baseValue + 20), self.frame.size.width - 80, 45)];
     [btTryAgain addTarget:self action:@selector(removePopup) forControlEvents:UIControlEventTouchUpInside];

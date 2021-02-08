@@ -61,13 +61,13 @@
     
     
     if(self.type == 4) {
-        [iv setImage:[UIImage imageNamed:@"frame_cnh"]];
+        [iv setImage:[UIImage imageNamed:@"frame_cnh" inBundle:SWIFTPM_MODULE_BUNDLE compatibleWithTraitCollection:nil]];
         [lbStatus setText:@"Enquadre a CNH aberta"];
     }else if (self.type == 501) {
-        [iv setImage:[UIImage imageNamed:@"frame_rg_frente"]];
+        [iv setImage:[UIImage imageNamed:@"frame_rg_frente" inBundle:SWIFTPM_MODULE_BUNDLE compatibleWithTraitCollection:nil]];
         [lbStatus setText:@"Enquadre o RG frente aberto"];
     }else if (self.type == 502){
-        [iv setImage:[UIImage imageNamed:@"frame_rg_verso"]];
+        [iv setImage:[UIImage imageNamed:@"frame_rg_verso" inBundle:SWIFTPM_MODULE_BUNDLE compatibleWithTraitCollection:nil]];
         [lbStatus setText:@"Enquadre o RG verso aberto"];
     }else{
         [iv setHidden:YES];
@@ -93,7 +93,7 @@
 - (void)addCloseButton {
     
     btClose = [[UIButton alloc]initWithFrame:CGRectMake(7, 20, 70, 70)];
-    [btClose setImage:[UIImage imageNamed:@"ic_close"] forState:UIControlStateNormal];
+    [btClose setImage:[UIImage imageNamed:@"ic_close" inBundle:SWIFTPM_MODULE_BUNDLE compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
     [btClose addTarget:self action:@selector(close) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btClose];
     
