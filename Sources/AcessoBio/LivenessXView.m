@@ -247,9 +247,8 @@ float marginOfSidesLivenessX = 80.0f;
         VNCoreMLModel *m;
         VNCoreMLRequest *request;
         
-        NSBundle *bundle = [NSBundle mainBundle];
-        NSURL *centerModelURL = [bundle URLForResource: @"CenterModelCrop" withExtension: @"mlmodel"];
-        NSURL *mobAwayModelURL = [bundle URLForResource: @"CenterModelCrop" withExtension: @"mlmodel"];
+        NSURL *centerModelURL = [SWIFTPM_MODULE_BUNDLE URLForResource: @"CenterModelCrop" withExtension: @"mlmodel"];
+        NSURL *mobAwayModelURL = [SWIFTPM_MODULE_BUNDLE URLForResource: @"CenterModelCrop" withExtension: @"mlmodel"];
         
         NSError *err;
         if ([centerModelURL checkResourceIsReachableAndReturnError:&err] == NO)
